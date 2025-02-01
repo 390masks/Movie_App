@@ -1,0 +1,117 @@
+/* Navbar.css */
+.navbar {
+  background: linear-gradient(90deg, rgba(0, 123, 255, 1) 0%, rgba(32, 178, 170, 1) 100%);
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.navbar h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.navbar h1:hover {
+  transform: scale(1.05);
+  color: #f0f0f0;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.navbar input {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  width: 250px;
+  transition: width 0.4s ease, background-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.navbar input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 300px;
+}
+
+.navbar .search-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.navbar .search-icon {
+  position: absolute;
+  left: 15px;
+  color: white;
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+
+.navbar input::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 300;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: 15px;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.navbar .navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-menu a {
+  margin-left: 20px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar .navbar-menu a:hover {
+  color: #32b3aa;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar input {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .navbar .navbar-menu a {
+    margin: 10px 0;
+  }
+}
